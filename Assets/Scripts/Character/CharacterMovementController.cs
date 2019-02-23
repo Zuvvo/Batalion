@@ -20,6 +20,8 @@ public class CharacterMovementController : MonoBehaviour
     private bool isSpacePressed;
     private bool isTouchingGround;
 
+    private bool isMovementEnabled = true;
+
     private Vector2 vectorUp = Vector2.up;
     private string groundTag = "Ground";
 
@@ -31,6 +33,11 @@ public class CharacterMovementController : MonoBehaviour
         {
             CheckForGround();
         }
+    }
+    
+    public void SetMovementActive(bool value)
+    {
+        isMovementEnabled = value;
     }
 
     private void CheckForGround()
@@ -61,11 +68,18 @@ public class CharacterMovementController : MonoBehaviour
 
     private void AddSpeedIfButtonPressed()
     {
+        if (!isMovementEnabled)
+        {
+            return;
+        }
+
         if (isSpacePressed && isTouchingGround)
         {
             isTouchingGround = false;
             RigidBody.AddForce(vectorUp * JumpPower, ForceMode2D.Impulse);
         }
+
+        //todo: ogarnąć dodawanie prędkości
 
         if (isLeftPressed)
         {

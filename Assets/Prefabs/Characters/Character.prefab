@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 5589762365948449990}
   - component: {fileID: 5505612196154922580}
   - component: {fileID: 963591740466810840}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,4 +174,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b022eabb4495e43a1dd02b0cb3771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 0
+  Health: 100
+  DiggerDragSpeed: 0.02

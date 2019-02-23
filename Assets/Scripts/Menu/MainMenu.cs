@@ -25,5 +25,9 @@ public class MainMenu : MonoBehaviour
         Debug.LogWarning("not implemented yet!");
     }
 
+    public void DebuStartGame()
+    {
+        SceneManager.LoadScene("Game");
+    }
 
 }
