@@ -27,7 +27,7 @@ public static class STF // Static Tag (Object) Finder
     {
         get
         {
-            return _inputController ?? (_inputController = _gm.InputController);
+            return _inputController ?? (_inputController = GameManager.InputController);
         }
     }
 

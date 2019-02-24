@@ -24,6 +24,8 @@ public class InputController : MonoBehaviour
     private bool isInitialized;
 
     private bool keyPressed;
+    private bool keyDown;
+    private bool keyUp;
 
     public bool IsKeyHeld(MyKeyCode key)
     {
@@ -94,6 +96,12 @@ public class InputController : MonoBehaviour
             InitKeysDict();
         }
         SetKeysValues();
+        TriggerKeyActions();
+    }
+
+    private void TriggerKeyActions()
+    {
+
     }
 
     private void SetKeysValues()
@@ -101,14 +109,33 @@ public class InputController : MonoBehaviour
         foreach (KeyValuePair<MyKeyCode, List<KeyCode>> keyPair in keysTranslate)
         {
             keyPressed = false;
+            keyUp = false;
+            keyDown = false;
             for (int i = 0; i < keyPair.Value.Count; i++)
             {
                 if (Input.GetKey(keyPair.Value[i]))
                 {
                     keyPressed = true;
                 }
+                if (Input.GetKeyDown(keyPair.Value[i]))
+                {
+                    keyDown = true;
+                }
+                if (Input.GetKeyUp(keyPair.Value[i]))
+                {
+                    keyUp = true;
+                }
             }
             keyHeld[keyPair.Key] = keyPressed;
+            if (keyUp)
+            {
+                keyUpActions[keyPair.Key].Call();
+            }
+            if (keyDown)
+            {
+                keyDownActions[keyPair.Key].Call();
+            }
+
         }
     }
 }
