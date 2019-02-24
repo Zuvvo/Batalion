@@ -4,6 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Library/shadercompiler-UnityShaderCompiler.exe0.log
 
 # Visual Studio cache directory
 .vs/

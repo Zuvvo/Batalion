@@ -6,5 +6,7 @@ public class UiManager : MonoBehaviour
 {
     public UiCommunique UiTooltip;
     public UiCommunique UiAlert;
-    public UiCharacterProgress UiCharacterProgress;
+    public UiProgressBar UiCharacterProgress;
+
+    public Transform UiProgressBarHolder;
 }
