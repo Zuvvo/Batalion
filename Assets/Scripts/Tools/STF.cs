@@ -22,8 +22,18 @@ public static class STF // Static Tag (Object) Finder
         }
     }
 
+    private static InputController _inputController;
+    public static InputController InputController
+    {
+        get
+        {
+            return _inputController ?? (_inputController = _gm.InputController);
+        }
+    }
+
     public static void NullReferences()
     {
+        _inputController = null;
         _uiManager = null;
         _gm = null;
     }

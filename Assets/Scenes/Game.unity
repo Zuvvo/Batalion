@@ -199,7 +199,7 @@ PrefabInstance:
     - target: {fileID: 4616342155526275515, guid: 4ae1b56976d7a7547acc74c83bd9f027,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4616342155526275515, guid: 4ae1b56976d7a7547acc74c83bd9f027,
         type: 3}
@@ -378,6 +378,49 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 776705974}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &875972640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 875972641}
+  - component: {fileID: 875972642}
+  m_Layer: 0
+  m_Name: InputController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &875972641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875972640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2461946, y: 15.420763, z: -1.1049289}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &875972642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875972640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 835295d42f1a0d0469a4abd8f8186582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &900537401 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 670211053330121088, guid: 89added6bf9a34145a96d672b46fda81,
@@ -425,7 +468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438c70b20d2308545b0970943dc4ca07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraSystem: {fileID: 0}
+  CameraSystem: {fileID: 1936982436}
+  InputController: {fileID: 875972642}
   Character: {fileID: 204808712}
 --- !u!4 &1022614823
 Transform:
@@ -439,7 +483,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1122209599
 PrefabInstance:
@@ -1222,7 +1266,7 @@ PrefabInstance:
     - target: {fileID: 6575173989444799759, guid: 7d469010e06380d47bc721512cc889c6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6575173989444799759, guid: 7d469010e06380d47bc721512cc889c6,
         type: 3}
@@ -1360,7 +1404,7 @@ PrefabInstance:
     - target: {fileID: 9219024951616105507, guid: cf29e4682ab78ee43bfe7463bf36f7d6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9219024951616105507, guid: cf29e4682ab78ee43bfe7463bf36f7d6,
         type: 3}

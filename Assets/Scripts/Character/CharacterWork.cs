@@ -21,7 +21,7 @@ public class CharacterWork : MonoBehaviour
         if (isWorking)
         {
             workCurrentTime += Time.deltaTime;
-            STF.UiManager.UiCharacterProgress.SetProgress(workCurrentTime / workTime, ProgressBarTransform.position);
+            STF.UiManager.UiCharacterProgress.SetProgress(workCurrentTime / workTime);
             if (workCurrentTime >= workTime)
             {
                 workCurrentTime = 0;
@@ -32,6 +32,7 @@ public class CharacterWork : MonoBehaviour
 
     public void StartWork(float workTime, int ticks = 1, Action callbackOnWorkEnded = null, Action callbackOnTickEnded = null)
     {
+        STF.UiManager.UiCharacterProgress.SetObjectToFollow(ProgressBarTransform);
         STF.UiManager.UiCharacterProgress.SetActive(true);
         this.workTime = workTime;
         this.callbackOnTickEnded = callbackOnTickEnded;
@@ -66,7 +67,7 @@ public class CharacterWork : MonoBehaviour
 
     private void WorkPositiveEnded()
     {
-        STF.UiManager.UiCharacterProgress.SetActive(false);
+        ForceStopWork();
         if (callbackOnWorkEnded != null)
         {
             callbackOnWorkEnded();

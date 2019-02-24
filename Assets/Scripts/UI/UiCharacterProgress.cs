@@ -8,8 +8,11 @@ public class UiCharacterProgress : MonoBehaviour
     public Image Bar;
     
     private Camera camera;
+    private Transform objToFollow;
+
 
     private bool isInitialized;
+    private bool isOn;
 
     public void Init(Transform objToFollow)
     {
@@ -20,18 +23,30 @@ public class UiCharacterProgress : MonoBehaviour
         }
     }
 
-    public void SetProgress(float value, Vector3 barPosition)
+    public void SetObjectToFollow(Transform obj)
     {
-        transform.position = camera.WorldToScreenPoint(barPosition);
+        objToFollow = obj;
+    }
+
+    public void SetProgress(float value)
+    {
         Bar.fillAmount = value;
     }
 
     public void SetActive(bool state)
     {
-        gameObject.SetActive(state);
+        if(state != isOn)
+        {
+            gameObject.SetActive(state);
+            isOn = state;
+        }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
+        if (isOn)
+        {
+            transform.position = camera.WorldToScreenPoint(objToFollow.transform.position);
+        }
     }
 }

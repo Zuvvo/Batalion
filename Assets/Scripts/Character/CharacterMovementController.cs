@@ -13,11 +13,11 @@ public class CharacterMovementController : MonoBehaviour
     public Rigidbody2D RigidBody;
 
 
-    private bool isLeftPressed;
-    private bool isRightPressed;
-    private bool isUpPressed;
-    private bool isDownPressed;
-    private bool isSpacePressed;
+    private bool isLeftHeld;
+    private bool isRightHeld;
+    private bool isUpHeld;
+    private bool isDownHeld;
+    private bool isSpaceHeld;
     private bool isTouchingGround;
 
     private bool isMovementEnabled = true;
@@ -28,13 +28,19 @@ public class CharacterMovementController : MonoBehaviour
     private void Update()
     {
         SetInputs();
+        CheckIfAnyMovementButtonIsPressed();
         AddSpeedIfButtonPressed();
         if (!isTouchingGround)
         {
             CheckForGround();
         }
     }
-    
+
+    private void CheckIfAnyMovementButtonIsPressed()
+    {
+
+    }
+
     public void SetMovementActive(bool value)
     {
         isMovementEnabled = value;
@@ -59,11 +65,11 @@ public class CharacterMovementController : MonoBehaviour
 
     private void SetInputs()
     {
-        isLeftPressed = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
-        isRightPressed = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
-        isUpPressed = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
-        isDownPressed = Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S);
-        isSpacePressed = Input.GetKey(KeyCode.Space);
+        isLeftHeld = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
+        isRightHeld = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
+        isUpHeld = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
+        isDownHeld = Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S);
+        isSpaceHeld = Input.GetKey(KeyCode.Space);
     }
 
     private void AddSpeedIfButtonPressed()
@@ -73,7 +79,7 @@ public class CharacterMovementController : MonoBehaviour
             return;
         }
 
-        if (isSpacePressed && isTouchingGround)
+        if (isSpaceHeld && isTouchingGround)
         {
             isTouchingGround = false;
             RigidBody.AddForce(vectorUp * JumpPower, ForceMode2D.Impulse);
@@ -81,19 +87,19 @@ public class CharacterMovementController : MonoBehaviour
 
         //todo: ogarnąć dodawanie prędkości
 
-        if (isLeftPressed)
+        if (isLeftHeld)
         {
             RigidBody.velocity += Vector2.left * Time.deltaTime * Speed;
         }
-        else if (isRightPressed)
+        else if (isRightHeld)
         {
             RigidBody.velocity += Vector2.right * Time.deltaTime * Speed;
         }
-        else if (isUpPressed)
+        else if (isUpHeld)
         {
             RigidBody.velocity += Vector2.up * Time.deltaTime * Speed;
         }
-        else if (isDownPressed)
+        else if (isDownHeld)
         {
             RigidBody.velocity += Vector2.down * Time.deltaTime * Speed;
         }
