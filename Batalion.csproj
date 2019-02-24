@@ -718,6 +718,7 @@
     <Compile Include="Assets\BitStrap\Examples\WebApi\WebApiExample.cs" />
     <Compile Include="Assets\Scripts\Character\Character.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterAction.cs" />
+    <Compile Include="Assets\Scripts\Character\CharacterEffects.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterMovementController.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterStats.cs" />
     <Compile Include="Assets\Scripts\Character\CharacterWork.cs" />

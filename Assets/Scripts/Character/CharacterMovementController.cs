@@ -12,6 +12,8 @@ public class CharacterMovementController : MonoBehaviour
     public BoxCollider2D Collider;
     public Rigidbody2D RigidBody;
 
+    public CharacterEffects MovementEffects;
+
 
     private bool isLeftHeld;
     private bool isRightHeld;
