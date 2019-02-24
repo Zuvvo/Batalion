@@ -61,6 +61,11 @@ public class UranDiggerRepairing : MonoBehaviour
 
     public void CharacterTriggerEnterExit(Character character, bool characterEntered)
     {
+        if (!characterEntered && isBeingRepaired)
+        {
+            isBeingRepaired = false;
+            repairingCharacter.Action.StopRepairing(this);
+        }
         repairingCharacter = character;
         characterInTrigger = characterEntered;
     }
