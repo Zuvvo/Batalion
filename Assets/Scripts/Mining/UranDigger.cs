@@ -5,56 +5,28 @@ using UnityEngine;
 
 public class UranDigger : MonoBehaviour
 {
-    public bool MovedForFirstTime;
-    public Transform TooltipTransform;
-    public Transform CharacterDragTransform;
+    public UranDiggerMovement MovementController;
+    public UranDiggerRepairing Repairing;
 
-    private string firstUseText = "Press ctrl + right arrow to move digger";
-    private bool isDragging;
-    private Character draggingCharacter;
-    private bool isDraggingAllowed;
+    public Transform AlertTransform;
 
-    private void Update()
+    private float destroyedInfoTime = 4;
+    private string destroyedInfo = "Ooops, digger got damaged. Hold E to repair it.";
+
+    private void Start()
     {
-        if (isDraggingAllowed && Input.GetKey(KeyCode.LeftControl) && (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
-        {
-            STF.GameManager.Character.MovementController.SetMovementActive(false);
-            isDragging = true;
-            if (!MovedForFirstTime)
-            {
-                STF.UiManager.UiTooltip.SetActive(false);
-                MovedForFirstTime = true;
-            }
-        }
-        else
-        {
-            STF.GameManager.Character.MovementController.SetMovementActive(true);
-            isDragging = false;
-        }
-
-        if (isDragging)
-        {
-            Transform charTransform = STF.GameManager.Character.transform;
-            transform.Translate(Vector3.right * STF.GameManager.Character.Stats.DiggerDragSpeed, Space.World);
-            charTransform.position =  new Vector3(CharacterDragTransform.position.x, charTransform.position.y, charTransform.position.z);
-        }
+        Repairing.OnDiggerRepaired += () => SetDiggerDestroyed(false);
     }
 
-    public void AllowToMove()
+    public void SetDiggerDestroyed(bool state = true)
     {
-        isDraggingAllowed = true;
-        if (!MovedForFirstTime)
-        {
-            STF.UiManager.UiTooltip.SetActive(true, TooltipTransform, firstUseText);
-        }
-    }
+        Repairing.SetToRepair(state);
+        MovementController.IsMovementBlocked = state;
 
-    public void DisallowToMove()
-    {
-        isDraggingAllowed = false;
-        if (!MovedForFirstTime)
+        if (state)
         {
-            STF.UiManager.UiTooltip.SetActive(false);
+            STF.UiManager.UiAlert.SetActive(true, AlertTransform, destroyedInfo);
+            STF.UiManager.UiAlert.SetOff(destroyedInfoTime);
         }
     }
 }

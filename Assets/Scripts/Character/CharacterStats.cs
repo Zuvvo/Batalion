@@ -6,4 +6,6 @@ public class CharacterStats : MonoBehaviour
 {
     public float Health;
     public float DiggerDragSpeed;
+
+    public float RepairOneHealthTime = 0.5f;
 }

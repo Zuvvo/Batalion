@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UiManager : MonoBehaviour
 {
-    public UiTooltip UiTooltip;
-
+    public UiCommunique UiTooltip;
+    public UiCommunique UiAlert;
+    public UiCharacterProgress UiCharacterProgress;
 }

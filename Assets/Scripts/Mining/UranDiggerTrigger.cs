@@ -10,12 +10,16 @@ public class UranDiggerTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Character"))
         {
-            UranDigger.AllowToMove();
+            Character character = collision.GetComponent<Character>();
+            UranDigger.MovementController.AllowToMove();
+            UranDigger.Repairing.CharacterTriggerEnterExit(character, true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        UranDigger.DisallowToMove();
+        Character character = collision.GetComponent<Character>();
+        UranDigger.MovementController.DisallowToMove();
+        UranDigger.Repairing.CharacterTriggerEnterExit(character, false);
     }
 }

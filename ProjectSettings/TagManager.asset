@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Character
   - UiManager
+  - Digger
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - PassableObject
+  - Character
   - 
   - 
   - 

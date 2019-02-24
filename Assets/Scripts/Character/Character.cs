@@ -6,4 +6,5 @@ public class Character : MonoBehaviour
 {
     public CharacterMovementController MovementController;
     public CharacterStats Stats;
+    public CharacterAction Action;
 }
