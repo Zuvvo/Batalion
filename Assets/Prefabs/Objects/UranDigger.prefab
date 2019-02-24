@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 27835283}
   - component: {fileID: 1122573360716817266}
   - component: {fileID: 5434307455941085218}
+  - component: {fileID: 8500244833399631783}
   m_Layer: 0
   m_Name: UranDigger
   m_TagString: Digger
@@ -154,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementController: {fileID: 1122573360716817266}
   Repairing: {fileID: 5434307455941085218}
+  UiUranDigger: {fileID: 8500244833399631783}
   AlertTransform: {fileID: 7213941617362963464}
 --- !u!114 &1122573360716817266
 MonoBehaviour:
@@ -186,6 +188,21 @@ MonoBehaviour:
   MaxHealth: 100
   StartHealth: 100
   ActualHealth: 0
+--- !u!114 &8500244833399631783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4616342155526275519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c79295e00ceb7458f24a40c9e0c8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UiProgressBar: {fileID: 0}
+  ProgressBarPrefab: {fileID: 5169990494156458699, guid: 8fd54479ad73ecd43be67ff6e811fe9e,
+    type: 3}
 --- !u!1 &5427479836636477998
 GameObject:
   m_ObjectHideFlags: 0

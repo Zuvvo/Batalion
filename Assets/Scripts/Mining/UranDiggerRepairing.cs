@@ -15,7 +15,7 @@ public class UranDiggerRepairing : MonoBehaviour
 
     public event Action OnDiggerRepaired;
 
-    public event Action<float> OnDiggerHealthChanged;
+    public event Action OnDiggerHealthChanged;
 
     private bool isDestroyed;
     private bool isBeingRepaired;
@@ -51,7 +51,7 @@ public class UranDiggerRepairing : MonoBehaviour
         ActualHealth += change;
         ActualHealth = Mathf.Clamp(ActualHealth, 0, MaxHealth);
 
-        CallOnHealthChanged(ActualHealth);
+        CallOnHealthChanged();
         if (ActualHealth == MaxHealth && isDestroyed)
         {
             SetToRepair(false);
@@ -90,11 +90,11 @@ public class UranDiggerRepairing : MonoBehaviour
         }
     }
 
-    private void CallOnHealthChanged(float health)
+    private void CallOnHealthChanged()
     {
         if(OnDiggerHealthChanged != null)
         {
-            OnDiggerHealthChanged(health);
+            OnDiggerHealthChanged();
         }
     }
 }

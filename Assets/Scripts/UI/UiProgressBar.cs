@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UiCharacterProgress : MonoBehaviour
+public class UiProgressBar : MonoBehaviour
 {
+    //prefaba z tym skryptem trzeba mieć wyłączonego, bo będzie isOn na false, a tak naprawdę będzie włączony
+    //można by to jakoś lepiej ogarnąć, ale ma to niskie prio
+
     public Image Bar;
     
     private Camera camera;
     private Transform objToFollow;
-
 
     private bool isInitialized;
     private bool isOn;
@@ -18,6 +20,7 @@ public class UiCharacterProgress : MonoBehaviour
     {
         if (!isInitialized)
         {
+            this.objToFollow = objToFollow;
             camera = Camera.main;
             isInitialized = true;
         }

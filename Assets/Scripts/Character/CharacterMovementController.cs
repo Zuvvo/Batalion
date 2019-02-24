@@ -65,11 +65,11 @@ public class CharacterMovementController : MonoBehaviour
 
     private void SetInputs()
     {
-        isLeftHeld = Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
-        isRightHeld = Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
-        isUpHeld = Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
-        isDownHeld = Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S);
-        isSpaceHeld = Input.GetKey(KeyCode.Space);
+        isLeftHeld = MyKeyCode.Left.IsKeyHeld(); //Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A);
+        isRightHeld = MyKeyCode.Right.IsKeyHeld(); //Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D);
+        isUpHeld = MyKeyCode.Up.IsKeyHeld();//Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W);
+        isDownHeld = MyKeyCode.Down.IsKeyHeld();  //Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S);
+        isSpaceHeld = MyKeyCode.Jump.IsKeyHeld(); //Input.GetKey(KeyCode.Space);
     }
 
     private void AddSpeedIfButtonPressed()

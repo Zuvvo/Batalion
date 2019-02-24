@@ -7,6 +7,7 @@ public class UranDigger : MonoBehaviour
 {
     public UranDiggerMovement MovementController;
     public UranDiggerRepairing Repairing;
+    public UiUranDiggerController UiUranDigger;
 
     public Transform AlertTransform;
 
@@ -16,6 +17,7 @@ public class UranDigger : MonoBehaviour
     private void Start()
     {
         Repairing.OnDiggerRepaired += () => SetDiggerDestroyed(false);
+        Repairing.OnDiggerHealthChanged += () => UiUranDigger.SetUiHealth(Repairing.ActualHealth / Repairing.MaxHealth);
     }
 
     public void SetDiggerDestroyed(bool state = true)
