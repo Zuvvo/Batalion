@@ -23,6 +23,7 @@ sysinfo.txt
 *.pidb.meta
 /*.suo
 /*.sln*
+/*.log
 /*.user
 /*.unityproj
 /*.booproj
