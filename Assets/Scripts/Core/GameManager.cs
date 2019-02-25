@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public CameraSystem CameraSystem;
     public InputController InputController;
     public Character Character;
+    public SpawnerManager SpawnerManager;
 
     private void OnLevelWasLoaded(int level)
     {

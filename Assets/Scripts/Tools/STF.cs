@@ -31,6 +31,15 @@ public static class STF // Static Tag (Object) Finder
         }
     }
 
+    private static SpawnerManager _spawnerManager;
+    public static SpawnerManager SpawnerManager
+    {
+        get
+        {
+            return _spawnerManager ?? (_spawnerManager = GameManager.SpawnerManager);
+        }
+    }
+
     public static void NullReferences()
     {
         _inputController = null;
