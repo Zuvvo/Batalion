@@ -29,7 +29,11 @@ public class InputController : MonoBehaviour
 
     public bool IsKeyHeld(MyKeyCode key)
     {
-        return keyHeld[key];
+        if (isInitialized)
+        {
+            return keyHeld[key];
+        }
+        return false;
     }
 
     ///<summary>

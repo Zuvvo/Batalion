@@ -9,12 +9,11 @@ public class CharacterEffects : MonoBehaviour
 
     private void ParticleSetActive(bool state)
     {
-        Debug.Log(state);
         if (state)
         {
             ParticleSystem.Play();
         }
-        else
+        else if(!MyKeyCode.Right.IsKeyHeld() && !MyKeyCode.Left.IsKeyHeld())
         {
             ParticleSystem.Stop();
         }
@@ -22,9 +21,10 @@ public class CharacterEffects : MonoBehaviour
 
     private void RotateChange(MyKeyCode key)
     {
-
         if (key.Equals(MyKeyCode.Left))
-            ParticleSystem.shape.rotation.Set(0,0,75);
+        {
+            ParticleSystem.shape.rotation.Set(0, 0, 75);
+        }
         else
         {
             ParticleSystem.shape.rotation.Set(0, 0, -75);
@@ -33,6 +33,8 @@ public class CharacterEffects : MonoBehaviour
 
     private void Start()
     {
+        ParticleSetActive(false);
+
         //STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => ParticleSystem.shape.rotation.Set(0, 0, 75));
         STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => RotateChange(MyKeyCode.Left));
         STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => ParticleSetActive(true));
