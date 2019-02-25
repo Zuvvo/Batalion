@@ -8,14 +8,16 @@ public class CharacterEffects : MonoBehaviour
 
     private void ParticleSetActive(bool state)
     {
-        Debug.Log(state);
         if (state)
         {
             ParticleSystem.Play();
         }
         else
         {
-            ParticleSystem.Stop();
+            if(!MyKeyCode.Left.IsKeyHeld() && !MyKeyCode.Right.IsKeyHeld())
+            {
+                ParticleSystem.Stop();
+            }
         }
     }
 

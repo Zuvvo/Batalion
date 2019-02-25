@@ -79,14 +79,17 @@ public class InputController : MonoBehaviour
 
     private void InitKeysDict()
     {
-        int keysCount = Enum.GetValues(typeof(MyKeyCode)).Length;
-        for (int i = 0; i < keysCount; i++)
+        if (!isInitialized)
         {
-            keyUpActions.Add((MyKeyCode)i, new SafeAction());
-            keyDownActions.Add((MyKeyCode)i, new SafeAction());
-            keyHeld.Add((MyKeyCode)i, false);
+            int keysCount = Enum.GetValues(typeof(MyKeyCode)).Length;
+            for (int i = 0; i < keysCount; i++)
+            {
+                keyUpActions.Add((MyKeyCode)i, new SafeAction());
+                keyDownActions.Add((MyKeyCode)i, new SafeAction());
+                keyHeld.Add((MyKeyCode)i, false);
+            }
+            isInitialized = true;
         }
-        isInitialized = true;
     }
 
     private void Update()
