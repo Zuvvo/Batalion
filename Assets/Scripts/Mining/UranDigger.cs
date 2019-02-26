@@ -14,10 +14,22 @@ public class UranDigger : MonoBehaviour
     private float destroyedInfoTime = 4;
     private string destroyedInfo = "Ooops, digger got damaged. Hold E to repair it.";
 
+    private bool repairCutsceneTriggered;
+
     private void Start()
     {
         Repairing.OnDiggerRepaired += () => SetDiggerDestroyed(false);
-        Repairing.OnDiggerHealthChanged += () => UiUranDigger.SetUiHealth(Repairing.ActualHealth / Repairing.MaxHealth);
+        Repairing.OnDiggerHealthChanged += () => UiUranDigger.SetUiHealth(Repairing.HealthPercent);
+        Repairing.OnDiggerHealthChanged += TryToTriggerCutscene;
+    }
+
+    private void TryToTriggerCutscene()
+    {
+        if(!repairCutsceneTriggered && Repairing.HealthPercent > 0.2f)
+        {
+            STF.CutsceneManager.PlayCutscene(0);
+            repairCutsceneTriggered = true;
+        }
     }
 
     public void SetDiggerDestroyed(bool state = true)

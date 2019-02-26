@@ -4957,7 +4957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   DiggerDragSpeed: 0.015
-  RepairOneHealthTime: 0.5
+  RepairOneHealthTime: 0.2
 --- !u!114 &625980859
 MonoBehaviour:
   m_ObjectHideFlags: 0

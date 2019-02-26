@@ -23,6 +23,14 @@ public class UranDiggerRepairing : MonoBehaviour
 
     private Character repairingCharacter;
 
+    public float HealthPercent
+    {
+        get
+        {
+            return ActualHealth / MaxHealth;
+        }
+    }
+
     
     private void Start()
     {
