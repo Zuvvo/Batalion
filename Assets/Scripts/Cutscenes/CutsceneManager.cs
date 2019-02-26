@@ -9,7 +9,6 @@ public class CutsceneManager : MonoBehaviour
 
     public void PlayCutscene(int id)
     {
-        STF.GameManager.Character.MovementController.SetMovementActive(false);
         GetCutsceneWithId(id).Play();
     }
 

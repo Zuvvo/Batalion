@@ -32,6 +32,7 @@ public class CharacterWork : MonoBehaviour
 
     public void StartWork(float workTime, int ticks = 1, Action callbackOnWorkEnded = null, Action callbackOnTickEnded = null)
     {
+        Debug.Log("start work time: " + workTime);
         STF.UiManager.UiCharacterProgress.SetObjectToFollow(ProgressBarTransform);
         STF.UiManager.UiCharacterProgress.SetActive(true);
         this.workTime = workTime;

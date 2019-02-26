@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         DebugColor.enabled = false;
-        SetActive(true);
+     //   SetActive(true);
         STF.SpawnerManager.RegisterSpawner(this);
     }
 

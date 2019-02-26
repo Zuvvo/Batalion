@@ -27,6 +27,8 @@ public abstract class Cutscene : MonoBehaviour
         if (!isPlaying)
         {
             isPlaying = true;
+            STF.GameManager.Character.MovementController.SetMovementActive(false);
+            STF.GameManager.Character.Action.DisableWorking();
             OnCutsceneStarted();
         }
     }
@@ -36,6 +38,8 @@ public abstract class Cutscene : MonoBehaviour
         if (isPlaying)
         {
             isPlaying = false;
+            STF.GameManager.Character.MovementController.SetMovementActive(true);
+            STF.GameManager.Character.Action.EnableWorking();
             OnCutsceneStopped();
         }
     }
