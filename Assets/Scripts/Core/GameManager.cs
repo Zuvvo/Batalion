@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public InputController InputController;
     public Character Character;
     public SpawnerManager SpawnerManager;
+    public CutsceneManager CutsceneManager;
 
     private void OnLevelWasLoaded(int level)
     {

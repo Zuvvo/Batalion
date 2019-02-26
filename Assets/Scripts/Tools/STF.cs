@@ -40,10 +40,31 @@ public static class STF // Static Tag (Object) Finder
         }
     }
 
+    private static CameraSystem _cameraSystem;
+    public static CameraSystem CameraSystem
+    {
+        get
+        {
+            return _cameraSystem ?? (_cameraSystem = GameManager.CameraSystem);
+        }
+    }
+
+    private static CutsceneManager _cutsceneManager;
+    public static CutsceneManager CutsceneManager
+    {
+        get
+        {
+            return _cutsceneManager ?? (_cutsceneManager = GameManager.CutsceneManager);
+        }
+    }
+
     public static void NullReferences()
     {
-        _inputController = null;
-        _uiManager = null;
         _gm = null;
+        _uiManager = null;
+        _inputController = null;
+        _spawnerManager = null;
+        _cameraSystem = null;
+        _cutsceneManager = null;
     }
 }
