@@ -15,6 +15,8 @@ public class InputController : MonoBehaviour
         { MyKeyCode.Jump, new List<KeyCode>() {KeyCode.Space} },
         { MyKeyCode.Interaction, new List<KeyCode>() {KeyCode.E } },
         { MyKeyCode.Drag, new List<KeyCode>() {KeyCode.LeftControl } },
+        { MyKeyCode.Attack1, new List<KeyCode>() {KeyCode.Alpha1 } },
+        { MyKeyCode.Attack2, new List<KeyCode>() {KeyCode.Alpha2 } },
     };
 
     private Dictionary<MyKeyCode, SafeAction> keyUpActions = new Dictionary<MyKeyCode, SafeAction>();
