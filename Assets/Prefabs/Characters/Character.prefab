@@ -4925,7 +4925,7 @@ MonoBehaviour:
   MovementController: {fileID: 5505612196154922580}
   Stats: {fileID: 963591740466810840}
   Action: {fileID: 625980859}
-  Nowy: 
+  FightController: {fileID: 8621551105886029376}
 --- !u!114 &5505612196154922580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4956,6 +4956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b022eabb4495e43a1dd02b0cb3771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UnlockedSkills: 0000000001000000
   Health: 100
   DiggerDragSpeed: 0.015
   RepairOneHealthTime: 0.2
@@ -5013,3 +5014,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b51e0c108569ac48b784dd6a09ec5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skills:
+  - Id: 0
+    Damage: 10
+    Cooldown: 1
+    Icon: {fileID: 21300008, guid: 726d2784a87b044f182b7487b3b8ebb8, type: 3}
+    SkillEffectId: 0
+  - Id: 1
+    Damage: 15
+    Cooldown: 2
+    Icon: {fileID: 21300000, guid: 553547fc4e6332b4aa3e0ce71b53c970, type: 3}
+    SkillEffectId: 1

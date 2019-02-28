@@ -4,5 +4,12 @@ using UnityEngine;
 
 public class AttackEffect : MonoBehaviour
 {
-    public float Damage;
+    public int Id;
+    public AttackEffectBehaviour Behaviour;
+    private float damage;
+
+    public void InitData(float damage)
+    {
+        this.damage = damage;
+    }
 }

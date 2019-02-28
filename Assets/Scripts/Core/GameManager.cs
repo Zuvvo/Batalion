@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public Character Character;
     public SpawnerManager SpawnerManager;
     public CutsceneManager CutsceneManager;
+    public AttacksDB AttacksDB;
 
     private void OnLevelWasLoaded(int level)
     {
