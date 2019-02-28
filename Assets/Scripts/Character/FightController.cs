@@ -12,7 +12,8 @@ public class FightController : MonoBehaviour
 
     private void Start()
     {
-        STF.InputController.RegisterKeyAction(MyKeyCode.Attack1, true, () => InitAttackWithId(0));
+        // STF.InputController.RegisterKeyAction(MyKeyCode.Attack1, true, () => InitAttackWithId(0));
+        STF.InputController.RegisterMouseAction(MouseButton.Left, true, () => InitAttackWithId(0));
         STF.InputController.RegisterKeyAction(MyKeyCode.Attack2, true, () => InitAttackWithId(1));
         InitSkillsDict();
     }
