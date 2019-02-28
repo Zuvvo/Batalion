@@ -4812,6 +4812,7 @@ Transform:
   m_Children:
   - {fileID: 1208610690781702333}
   - {fileID: 8934494521354417180}
+  - {fileID: 4106969126875447721}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5014,10 +5015,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b51e0c108569ac48b784dd6a09ec5b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShotStartPoint: {fileID: 4106969126875447721}
   skills:
   - Id: 0
     Damage: 10
-    Cooldown: 1
+    Cooldown: 0.2
     Icon: {fileID: 21300008, guid: 726d2784a87b044f182b7487b3b8ebb8, type: 3}
     SkillEffectId: 0
   - Id: 1
@@ -5025,3 +5027,33 @@ MonoBehaviour:
     Cooldown: 2
     Icon: {fileID: 21300000, guid: 553547fc4e6332b4aa3e0ce71b53c970, type: 3}
     SkillEffectId: 1
+--- !u!1 &7578038250921944222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4106969126875447721}
+  m_Layer: 9
+  m_Name: ShotStartPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4106969126875447721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578038250921944222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8601911586813860155}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

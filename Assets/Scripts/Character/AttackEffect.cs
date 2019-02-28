@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackEffect : MonoBehaviour
 {
     public int Id;
-    public AttackEffectBehaviour Behaviour;
+    public AttackBehaviour Behaviour;
     private float damage;
 
     public void InitData(float damage)

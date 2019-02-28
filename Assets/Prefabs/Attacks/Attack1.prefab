@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2715610544769575787}
   - component: {fileID: 834915406256787814}
   - component: {fileID: 3769734018326608911}
-  - component: {fileID: 3577269632105924344}
+  - component: {fileID: 1946501477525036631}
   m_Layer: 0
   m_Name: Attack1
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5884795309724992221}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.34, y: -1.41, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 0
-  Behaviour: {fileID: 3577269632105924344}
---- !u!114 &3577269632105924344
+  Behaviour: {fileID: 1946501477525036631}
+--- !u!114 &1946501477525036631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,6 +104,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5884795309724992221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff4f811df84f054ea27037073058cae, type: 3}
+  m_Script: {fileID: 11500000, guid: c826a2ee2f5965c47a577dd7f7e51916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 10
+  DestroyTime: 2

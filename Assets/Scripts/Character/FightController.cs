@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FightController : MonoBehaviour
 {
+    public Transform ShotStartPoint;
     [SerializeField]
     private List<SkillData> skills;
 
@@ -21,6 +22,11 @@ public class FightController : MonoBehaviour
     private void Update()
     {
         UpdateSkillsCooldown();
+
+        if (STF.InputController.IsMouseHeld(MouseButton.Left))
+        {
+            InitAttackWithId(0);
+        }
     }
 
     public List<SkillData> GetSkills()
@@ -31,15 +37,12 @@ public class FightController : MonoBehaviour
     public void InitAttackWithId(int id)
     {
         SkillData data = skillsDict[id];
-        Debug.Log(data.Cooldown + "   " + data.ActualCd);
         if (data.ActualCd == 0)
         {
             data.ActualCd = data.Cooldown;
             AttackEffect attackEffectPrefab = STF.GameManager.AttacksDB.GetAttackEffectWithId(data.SkillEffectId);
             AttackEffect attack = Instantiate(attackEffectPrefab, transform.position, Quaternion.identity);
             attack.InitData(data.Damage);
-            Debug.Log("Attack " + id + " damage: " + data.Damage);
-
         }
     }
 

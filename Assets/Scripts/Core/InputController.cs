@@ -207,7 +207,7 @@ public class InputController : MonoBehaviour
         for (int i = 0; i < mouseButtons; i++)
         {
             MouseButton button = (MouseButton)i;
-            mouseHeld[button] = Input.GetMouseButtonUp(i);
+            mouseHeld[button] = Input.GetMouseButton(i);
             if (Input.GetMouseButtonDown((i)))
             {
                 mouseDownActions[button].Call();
