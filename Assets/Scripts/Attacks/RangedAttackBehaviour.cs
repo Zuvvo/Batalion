@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class RangedAttackBehaviour : AttackBehaviour
 {
-    private Vector3 direction;
+    protected Vector3 direction;
 
     protected override void Start()
     {
         base.Start();
         Vector3 mousePos = STF.Camera.ScreenToWorldPoint(Input.mousePosition);
         direction = ((Vector2)mousePos - (Vector2)STF.GameManager.Character.FightController.ShotStartPoint.position).normalized;
-        Debug.Log(direction);
+    }
+
+    protected void StarTop()
+    {
+        base.Start();
     }
 
     private void Update()

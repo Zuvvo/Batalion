@@ -4973,7 +4973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eed65dfd5fd8b4341bf6fccfe164be06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Character: {fileID: 5589762365948449990}
   Work: {fileID: 625980858}
   ActualWorkType: 0
   ProgressBarTransformPosition: {fileID: 1208610690781702333}
@@ -5020,7 +5019,7 @@ MonoBehaviour:
   - Id: 0
     Damage: 10
     Cooldown: 0.2
-    Icon: {fileID: 21300008, guid: 726d2784a87b044f182b7487b3b8ebb8, type: 3}
+    Icon: {fileID: 21300004, guid: 726d2784a87b044f182b7487b3b8ebb8, type: 3}
     SkillEffectId: 0
   - Id: 1
     Damage: 15

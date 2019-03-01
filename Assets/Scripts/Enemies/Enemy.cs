@@ -6,4 +6,8 @@ public class Enemy : MonoBehaviour
 {
     public int Id;
 
+    private void OnDestroy()
+    {
+        STF.GameManager.SpawnerManager.Enemies.Remove(this);
+    }
 }

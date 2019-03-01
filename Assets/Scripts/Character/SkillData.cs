@@ -13,6 +13,7 @@ public class SkillData
     public int SkillEffectId;
 
     public event Action<float> OnCdChanged;
+    private float actualCd;
 
     [HideInInspector]
     public float ActualCd
@@ -27,9 +28,7 @@ public class SkillData
             CallOnCdChanged();
         }
     }
-
-    private float actualCd;
-
+    
     private void CallOnCdChanged()
     {
         if(OnCdChanged != null)
