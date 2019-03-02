@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     public Character Character;
     public SpawnerManager SpawnerManager;
     public CutsceneManager CutsceneManager;
+    public AttacksDB AttacksDB;
+    public AmmoDB AmmoDB;
+
+    public Transform BulletsHolder;
 
     private void OnLevelWasLoaded(int level)
     {

@@ -10,5 +10,7 @@ public enum MyKeyCode
     Up,
     Jump,
     Interaction,
-    Drag
+    Drag,
+    Attack1,
+    Attack2
 }

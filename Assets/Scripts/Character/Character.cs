@@ -7,5 +7,5 @@ public class Character : MonoBehaviour
     public CharacterMovementController MovementController;
     public CharacterStats Stats;
     public CharacterAction Action;
-    public string Nowy;
+    public FightController FightController;
 }

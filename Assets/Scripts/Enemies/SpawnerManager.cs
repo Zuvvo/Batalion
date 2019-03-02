@@ -6,6 +6,9 @@ using UnityEngine;
 public class SpawnerManager : MonoBehaviour
 {
     public bool DebugStopSpawners;
+    public bool DebugSpawnSpiders;
+
+    public List<Enemy> Enemies = new List<Enemy>();
 
     [SerializeField]
     private Enemy[] EnemyPrefabs;
@@ -18,6 +21,7 @@ public class SpawnerManager : MonoBehaviour
 
     private List<EnemySpawner> spawners = new List<EnemySpawner>();
 
+
     private void Update()
     {
 #if UNITY_EDITOR
@@ -26,7 +30,21 @@ public class SpawnerManager : MonoBehaviour
             StopAllSpawners();
             DebugStopSpawners = false;
         }
+        if (DebugSpawnSpiders)
+        {
+            SpawnSpiders();
+            DebugSpawnSpiders = false;
+        }
+
 #endif
+    }
+
+    private void SpawnSpiders()
+    {
+        for (int i = 0; i < spawners.Count; i++)
+        {
+            spawners[i].SetActive(true);
+        }
     }
 
     public Enemy InstantiateEnemyWithId(int id, Vector3 position, Quaternion rotation)
@@ -35,7 +53,9 @@ public class SpawnerManager : MonoBehaviour
         {
             InitializeDict();
         }
-        return Instantiate(enemyPrefabsDict[id], position, rotation, EnemyHolder);
+        Enemy enemy = Instantiate(enemyPrefabsDict[id], position, rotation, EnemyHolder);
+        Enemies.Add(enemy);
+        return enemy;
     }
 
     public void StopAllSpawners()

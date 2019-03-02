@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
+    public int[] UnlockedSkills;
     public float Health;
     public float DiggerDragSpeed;
 

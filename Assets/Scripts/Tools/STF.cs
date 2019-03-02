@@ -58,6 +58,15 @@ public static class STF // Static Tag (Object) Finder
         }
     }
 
+    private static Camera _camera;
+    public static Camera Camera
+    {
+        get
+        {
+            return _camera ?? (_camera = Camera.main);
+        }
+    }
+
     public static void NullReferences()
     {
         _gm = null;

@@ -36,7 +36,7 @@ public class CharacterEffects : MonoBehaviour
         ParticleSetActive(false);
 
         //STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => ParticleSystem.shape.rotation.Set(0, 0, 75));
-        STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => RotateChange(MyKeyCode.Left));
+        //STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => RotateChange(MyKeyCode.Left));
         STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => ParticleSetActive(true));
 
         //STF.InputController.RegisterKeyAction(MyKeyCode.Right, true, () => ParticleSystem.shape.rotation.Set(0, 0, -75));
