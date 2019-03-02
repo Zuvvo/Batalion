@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 834915406256787814}
   - component: {fileID: 3769734018326608911}
   - component: {fileID: 1946501477525036631}
-  m_Layer: 0
+  - component: {fileID: 1088869565368432735}
+  m_Layer: 12
   m_Name: Attack1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,3 +110,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 10
   DestroyTime: 2
+--- !u!61 &1088869565368432735
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5884795309724992221}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.009905994, y: 0.010318041}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.49476063, y: 0.49506232}
+    oldSize: {x: 1.8906268, y: 2.0896473}
+    newSize: {x: 1.8906268, y: 2.0896473}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8906268, y: 2.0896473}
+  m_EdgeRadius: 0

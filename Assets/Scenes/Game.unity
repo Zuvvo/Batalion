@@ -1119,6 +1119,7 @@ MonoBehaviour:
   CutsceneManager: {fileID: 2055376831}
   AttacksDB: {fileID: 11400000, guid: 09b6fee62bcdc2b4cb1a71222515ffb4, type: 2}
   AmmoDB: {fileID: 11400000, guid: 31ebaf90351c8c74d935c81c185fc7be, type: 2}
+  BulletsHolder: {fileID: 0}
 --- !u!4 &1022614823
 Transform:
   m_ObjectHideFlags: 0
@@ -1177,6 +1178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DebugStopSpawners: 0
+  DebugSpawnSpiders: 0
+  Enemies: []
   EnemyPrefabs:
   - {fileID: 4706016098749822979, guid: c252143db2cf6264a97cd67ba972d7ce, type: 3}
   - {fileID: 7428183053177974718, guid: b22fb1abea055bd4aa096a8914962066, type: 3}
