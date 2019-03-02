@@ -142,7 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 0
-  MoveSpeed: 300
+  DistanceToShoot: 5
+  MoveSpeed: 5
   JumpDelay: 1
   ShootDelay: 1
   AmmoId: 0
