@@ -8,7 +8,6 @@ public class EnemyRangedAttackBehaviour : RangedAttackBehaviour
     {
         StarTop();
         direction = (STF.GameManager.Character.transform.position - transform.position).normalized;
-        Debug.Log(direction);
     }
 
 }
