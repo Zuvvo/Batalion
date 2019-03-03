@@ -143,6 +143,16 @@ public class InputController : MonoBehaviour
     }
     #endregion
 
+    public float GetVerticalAxisRaw()
+    {
+        return Input.GetAxisRaw("Vertical");
+    }
+
+    public float GetHorizontalAxisRaw()
+    {
+        return Input.GetAxisRaw("Horizontal");
+    }
+
     private void InitKeysDict()
     {
         if (!isInitialized)

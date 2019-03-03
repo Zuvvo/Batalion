@@ -27,15 +27,19 @@ public class CharacterMovementController : MonoBehaviour
     private Vector2 vectorUp = Vector2.up;
     private string groundTag = "Ground";
 
+    private float horizontalAxisRaw;
+
+    private void Start()
+    {
+        STF.InputController.RegisterKeyAction(MyKeyCode.Jump, true, Jump);
+    }
+
     private void Update()
     {
         SetInputs();
         CheckIfAnyMovementButtonIsPressed();
         AddSpeedIfButtonPressed();
-        if (!isTouchingGround)
-        {
-            CheckForGround();
-        }
+        CheckForGround();
     }
 
     private void CheckIfAnyMovementButtonIsPressed()
@@ -52,16 +56,24 @@ public class CharacterMovementController : MonoBehaviour
     {
         //todo: ogarnąć layerMask i castowanie spod nóg a nie z środka (transform.position)
         //layer postaci to "ignore raycast" dlatego nie łapie, ale musi mieć włączone łapanie raycastów jak będą do niego przecwnicy strzelać
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, GroundDistance);
-        Debug.DrawLine(transform.position, (Vector2)transform.position + (Vector2.down * GroundDistance));
-        if(hit.collider == null)
-        {
-            return;
-        }
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector2.down, GroundDistance);
+        //Debug.DrawLine(transform.position, (Vector2)transform.position + (Vector2.down * GroundDistance));
 
-        if (hit.collider.CompareTag(groundTag))
+        if(hits.Length == 0)
         {
-            isTouchingGround = true;
+            isTouchingGround = false;
+        }
+        else
+        {
+            for (int i = 0; i < hits.Length; i++)
+            {
+                bool touch = false;
+                if (hits[i].collider.CompareTag(groundTag))
+                {
+                    touch = true;
+                }
+                isTouchingGround = touch;
+            }
         }
     }
 
@@ -74,6 +86,14 @@ public class CharacterMovementController : MonoBehaviour
         isSpaceHeld = MyKeyCode.Jump.IsKeyHeld(); //Input.GetKey(KeyCode.Space);
     }
 
+    private void Jump()
+    {
+        if (isTouchingGround)
+        {
+            RigidBody.AddForce(vectorUp * JumpPower, ForceMode2D.Impulse);
+        }
+    }
+
     private void AddSpeedIfButtonPressed()
     {
         if (!isMovementEnabled)
@@ -81,29 +101,10 @@ public class CharacterMovementController : MonoBehaviour
             return;
         }
 
-        if (isSpaceHeld && isTouchingGround)
-        {
-            isTouchingGround = false;
-            RigidBody.AddForce(vectorUp * JumpPower, ForceMode2D.Impulse);
-        }
-
         //todo: ogarnąć dodawanie prędkości
 
-        if (isLeftHeld)
-        {
-            RigidBody.velocity += Vector2.left * Time.deltaTime * Speed;
-        }
-        else if (isRightHeld)
-        {
-            RigidBody.velocity += Vector2.right * Time.deltaTime * Speed;
-        }
-        else if (isUpHeld)
-        {
-            RigidBody.velocity += Vector2.up * Time.deltaTime * Speed;
-        }
-        else if (isDownHeld)
-        {
-            RigidBody.velocity += Vector2.down * Time.deltaTime * Speed;
-        }
+        horizontalAxisRaw = STF.InputController.GetHorizontalAxisRaw();
+        Vector2 forceVector = new Vector2(horizontalAxisRaw, 0) * Speed;
+        RigidBody.AddForce(forceVector);
     }
 }

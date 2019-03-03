@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4706016098749822979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 0
   DistanceToShoot: 5
-  MoveSpeed: 5
+  MoveSpeed: 2
   JumpDelay: 1
   ShootDelay: 1
   AmmoId: 0

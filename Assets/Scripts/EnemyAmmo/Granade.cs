@@ -20,8 +20,8 @@ public class Granade : EnemyAmmo
         timeCounter++;
         if (timeCounter > timeLimit)
         {
-            granade.gameObject.SetActive(false);
-            Destroy(granade.gameObject);
+            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
