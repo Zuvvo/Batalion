@@ -25,8 +25,9 @@ public class Spider : Enemy
 
     private float direction;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         currentAmmo = maxAmmo;
         StartCoroutine(Jump());
         StartCoroutine(Shoot());
