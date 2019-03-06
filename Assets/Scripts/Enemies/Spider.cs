@@ -23,8 +23,11 @@ public class Spider : Enemy
 
     private bool movementEnabled = true;
 
-    private void Start()
+    private float direction;
+
+    protected override void Start()
     {
+        base.Start();
         currentAmmo = maxAmmo;
         StartCoroutine(Jump());
         StartCoroutine(Shoot());
@@ -35,8 +38,21 @@ public class Spider : Enemy
     {
         while (true)
         {
+            Character character = STF.GameManager.Character;
+
             yield return new WaitForSeconds(0.1f);
-            float distanceToPlayer = Vector2.Distance(STF.GameManager.Character.transform.position,transform.position);
+
+            Vector2 enemyToPlayer = (Vector2)transform.position - (Vector2)character.transform.position;
+            if (enemyToPlayer.x > 0)
+            {
+                direction = -1;
+            }
+            else
+            {
+                direction = 1;
+            }
+
+            float distanceToPlayer = Vector2.Distance(STF.GameManager.Character.transform.position, transform.position);
 
             movementEnabled = distanceToPlayer >= DistanceToShoot;
         }
@@ -44,12 +60,11 @@ public class Spider : Enemy
 
     private IEnumerator Shoot()
     {
-        while(currentAmmo > 0)
+        while (currentAmmo > 0)
         {
             yield return new WaitForSeconds(ShootDelay);
             Bullet bulletPrefab = (Bullet)STF.GameManager.AmmoDB.GetEnemyAmmo(AmmoId);
             Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity, STF.GameManager.BulletsHolder);
-           // bullet.AddStartFoce(new Vector2(-0.02f, 0.01f), 7);
         }
     }
 
@@ -59,21 +74,20 @@ public class Spider : Enemy
         {
             yield return new WaitForSeconds(JumpDelay);
             RigidBody2D.AddForce(Vector2.up * JumpPower);
-         //   Debug.Log("HOP!");
+            //   Debug.Log("HOP!");
         }
     }
 
     private void Update()
     {
-        MoveLeft();
+        MoveToPlayer();
     }
 
-    private void MoveLeft()
+    private void MoveToPlayer()
     {
         if (movementEnabled)
         {
-            float force = MoveSpeed * Time.deltaTime;
-            RigidBody2D.AddForce(Vector2.left * force);
+            transform.position = transform.position + new Vector3(direction, 0, 0) * MoveSpeed * Time.deltaTime;
         }
     }
 }

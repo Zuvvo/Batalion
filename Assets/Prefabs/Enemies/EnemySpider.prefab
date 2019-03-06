@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4706016098749822979}
   m_Layer: 10
   m_Name: EnemySpider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4706016098749822979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +142,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 0
-  MoveSpeed: 300
+  StartHealth: 30
+  DistanceToShoot: 5
+  MoveSpeed: 2
   JumpDelay: 1
   ShootDelay: 1
   AmmoId: 0

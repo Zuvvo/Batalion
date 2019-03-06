@@ -10,7 +10,6 @@ public class EnemyAmmo : MonoBehaviour
     {
         if (collision.collider.CompareTag("Character"))
         {
-            Debug.Log("collision");
             Destroy(gameObject);
         }
     }

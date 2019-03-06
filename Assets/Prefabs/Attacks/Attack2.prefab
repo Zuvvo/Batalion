@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7579162805255509146}
   - component: {fileID: 2348479120027666878}
   - component: {fileID: 987500882413735397}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Attack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,3 +107,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff4f811df84f054ea27037073058cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
+  DestroyTime: 0

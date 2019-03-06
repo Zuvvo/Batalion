@@ -8,6 +8,7 @@ TagManager:
   - Character
   - UiManager
   - Digger
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - PassableObject
   - Character
   - Enemy
-  - 
-  - 
+  - EnemyAttack
+  - PlayerAttack
   - 
   - 
   - 
@@ -44,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Dron
+    uniqueID: 170137971
+    locked: 0
+  - name: New Layer
+    uniqueID: 3231776877
     locked: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2603189402124786480}
   - component: {fileID: 2603189402124786483}
   - component: {fileID: 5830476534266481303}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Granade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,4 +129,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd8b552659eea44c954402ea74066f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Id: 0
   granade: {fileID: 2603189402124786483}

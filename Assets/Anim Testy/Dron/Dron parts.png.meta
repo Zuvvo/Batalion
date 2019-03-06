@@ -1,0 +1,530 @@
+fileFormatVersion: 2
+guid: 4951474f9c08ff546b6395d0ec687d9a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Dron parts_0
+    21300002: Dron parts_1
+    21300004: Dron parts_6
+    21300006: Dron parts_7
+    21300008: Dron parts_8
+    21300010: Dron parts_9
+    21300012: Dron parts_10
+    21300014: Dron parts_11
+    21300016: Dron parts_12
+    21300018: Dron parts_13
+    21300020: Dron parts_14
+    21300022: Dron parts_15
+    21300024: Dron parts_16
+    21300026: Dron parts_17
+    21300028: Dron parts_18
+    21300030: Dron parts_19
+    21300032: Dron parts_20
+    21300034: Dron parts_21
+    21300036: Dron parts_22
+    21300038: Dron parts_23
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dron parts_0
+      rect:
+        serializedVersion: 2
+        x: 81.26906
+        y: 1870.9471
+        width: 514.98444
+        height: 964.05286
+      alignment: 9
+      pivot: {x: 0.47327828, y: 0.50365794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6033dd4601ba64f45800162d1987e1c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_1
+      rect:
+        serializedVersion: 2
+        x: 850.222
+        y: 1312.3381
+        width: 1071.4639
+        height: 1421.9629
+      alignment: 9
+      pivot: {x: 0.49864304, y: 0.49872032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de959cfb13e776f41848b1790d72f771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_6
+      rect:
+        serializedVersion: 2
+        x: 2372.9998
+        y: 2024.6035
+        width: 348.8711
+        height: 679.3059
+      alignment: 9
+      pivot: {x: 0.49731907, y: 0.49962246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59262b2d783ba6647b7a31467abc7e3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_7
+      rect:
+        serializedVersion: 2
+        x: 2946
+        y: 1661.6743
+        width: 392.06055
+        height: 1064.6133
+      alignment: 9
+      pivot: {x: 0.49737278, y: 0.49954823}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f5506ea11a9ec47b7e066967596d18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_8
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 2256
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7db0188e81d772409dfed641fcc154e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_9
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 1875
+        width: 30
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e5614581817084cabdc7a9f3a6ff81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_10
+      rect:
+        serializedVersion: 2
+        x: 2251
+        y: 1865
+        width: 37
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945e39c164e92b148b321706bb0e963c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_11
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 1832
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5522529b4b863334dbf77c35bf455226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_12
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 1830
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c3af93edde01f49bbafb2c9723e674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_13
+      rect:
+        serializedVersion: 2
+        x: 29.607841
+        y: 707.8235
+        width: 619.63574
+        height: 1054.8527
+      alignment: 9
+      pivot: {x: 0.4976991, y: 0.4997632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bce8b632cc71dc4aafb638929ab436a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_14
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 1717
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f9de895783503498565b732577ecff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_15
+      rect:
+        serializedVersion: 2
+        x: 2283.4507
+        y: 1142.4797
+        width: 518.30664
+        height: 614.65234
+      alignment: 9
+      pivot: {x: 0.49787, y: 0.5019429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40806f1db1091041a045aadda117595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_16
+      rect:
+        serializedVersion: 2
+        x: 2857
+        y: 1153
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3520f04295a6dcc4f99c5337ab75ab15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_17
+      rect:
+        serializedVersion: 2
+        x: 2921.9143
+        y: 313.3291
+        width: 438.57227
+        height: 1036.5802
+      alignment: 9
+      pivot: {x: 0.49954352, y: 0.49988505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40001b856aed2a64582a69ef1c0f210d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_18
+      rect:
+        serializedVersion: 2
+        x: 2081
+        y: 980
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead0d72880c220d4f91ee912493c9c7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_19
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 966
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00cc187c0cf05c4187463b6d6b8fb27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_20
+      rect:
+        serializedVersion: 2
+        x: 973.4067
+        y: 9.78093
+        width: 634.586
+        height: 968.47363
+      alignment: 9
+      pivot: {x: 0.49732158, y: 0.49740037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb2b44732b290f48b5beaa776107b85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_21
+      rect:
+        serializedVersion: 2
+        x: 2900
+        y: 754
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23d6fad25f9c9241b52c7ab6abfc340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_22
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 657
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8d82c1aee4fcb458d37c280760c8aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dron parts_23
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 31.992775
+        width: 516.6455
+        height: 151.16873
+      alignment: 9
+      pivot: {x: 0.498408, y: 0.49618214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ce93c74fca9134581d2f47c4a4adda
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 090f62b8c17f23043a62d927ffe8ca69
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 636874878260302723
+  assetBundleName: 
+  assetBundleVariant: 

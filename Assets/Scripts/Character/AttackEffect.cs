@@ -12,4 +12,16 @@ public class AttackEffect : MonoBehaviour
     {
         this.damage = damage;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.collider.GetComponent<Enemy>();
+            if(enemy != null)
+            {
+                enemy.ApplyDamage(damage);
+            }
+        }
+    }
 }
