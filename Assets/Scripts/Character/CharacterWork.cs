@@ -53,16 +53,13 @@ public class CharacterWork : MonoBehaviour
     private void EndWorkTick()
     {
         workTicks--;
-        if(workTicks <= 0)
+        if (callbackOnTickEnded != null)
+        {
+            callbackOnTickEnded();
+        }
+        if (workTicks <= 0)
         {
             WorkPositiveEnded();
-        }
-        else
-        {
-            if(callbackOnTickEnded != null)
-            {
-                callbackOnTickEnded();
-            }
         }
     }
 
