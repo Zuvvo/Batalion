@@ -22,6 +22,7 @@ public class AttackEffect : MonoBehaviour
             {
                 enemy.ApplyDamage(damage);
             }
+            Destroy(gameObject);
         }
     }
 }
