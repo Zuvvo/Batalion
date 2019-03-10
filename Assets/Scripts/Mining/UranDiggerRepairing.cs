@@ -62,6 +62,7 @@ public class UranDiggerRepairing : MonoBehaviour
         CallOnHealthChanged();
         if (ActualHealth == MaxHealth && isDestroyed)
         {
+            Debug.Log("repaired");
             SetToRepair(false);
             CallOnRepaired();
         }

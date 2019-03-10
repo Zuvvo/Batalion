@@ -19,9 +19,9 @@ public class UiUranDiggerController : MonoBehaviour
             UiProgressBar = Instantiate(ProgressBarPrefab, STF.UiManager.UiProgressBarHolder);
             UiProgressBar.Init(transform);
             UiProgressBar.SetProgress(0);
-            UiProgressBar.SetActive(true);
             uiBarInitialized = true;
         }
         UiProgressBar.SetProgress(value);
+        UiProgressBar.SetActive(value < 1 && value > 0);
     }
 }
