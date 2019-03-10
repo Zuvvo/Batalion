@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Left arm
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: 21300006, guid: 4951474f9c08ff546b6395d0ec687d9a, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 4fc9b34d2c42d934aae6de3b54ae25a4, type: 3}
   m_SharedMesh: {fileID: 43152671197139008}
 --- !u!43 &43152671197139008
 Mesh:
