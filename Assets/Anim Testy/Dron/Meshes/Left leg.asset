@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Left leg
   m_EditorClassIdentifier: 
   m_ApiVersion: 4
-  m_Sprite: {fileID: 21300004, guid: 4951474f9c08ff546b6395d0ec687d9a, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 4fc9b34d2c42d934aae6de3b54ae25a4, type: 3}
   m_SharedMesh: {fileID: 43886281677173894}
 --- !u!43 &43886281677173894
 Mesh:
