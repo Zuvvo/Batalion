@@ -49,6 +49,9 @@ TagManager:
   - name: Dron
     uniqueID: 170137971
     locked: 0
-  - name: New Layer
+  - name: Enemy
     uniqueID: 3231776877
+    locked: 0
+  - name: New Layer
+    uniqueID: 2995887357
     locked: 0
