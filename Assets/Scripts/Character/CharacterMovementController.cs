@@ -29,6 +29,16 @@ public class CharacterMovementController : MonoBehaviour
 
     private float horizontalAxisRaw;
 
+    private bool isLookingRight = true;
+
+    private Character character
+    {
+        get
+        {
+            return STF.GameManager.Character;
+        }
+    }
+
     private void Start()
     {
         STF.InputController.RegisterKeyAction(MyKeyCode.Jump, true, Jump);
@@ -40,6 +50,50 @@ public class CharacterMovementController : MonoBehaviour
         CheckIfAnyMovementButtonIsPressed();
         AddSpeedIfButtonPressed();
         CheckForGround();
+        SetAnimator();
+        SetLookDirection();
+    }
+
+    private void SetLookDirection()
+    {
+        bool isPushing = character.AnimatorController.CurrentState == AnimationState.Push;
+
+        if (isPushing) // temp solution
+        {
+            isLookingRight = true;
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            return;
+        }
+
+        if(horizontalAxisRaw == -1 && isLookingRight)
+        {
+            isLookingRight = false;
+            transform.rotation = new Quaternion(0, 180, 0, 0);
+        }
+        else if(horizontalAxisRaw == 1 && !isLookingRight)
+        {
+            isLookingRight = true;
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
+    }
+
+    private void SetAnimator()
+    {
+        bool isPushing = character.AnimatorController.CurrentState == AnimationState.Push;
+
+        if (isPushing)
+        {
+            return;
+        }
+
+        if (horizontalAxisRaw != 0)
+        {
+            character.AnimatorController.SetState(AnimationState.Walk);
+        }
+        else
+        {
+            character.AnimatorController.SetState(AnimationState.Idle);
+        }
     }
 
     private void CheckIfAnyMovementButtonIsPressed()

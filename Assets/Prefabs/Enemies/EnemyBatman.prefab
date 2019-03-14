@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7463912901055906140}
   - component: {fileID: 309435994399394566}
   - component: {fileID: 8112994089100682252}
-  - component: {fileID: 7428183053177974718}
+  - component: {fileID: 6997565437651562257}
   m_Layer: 10
   m_Name: EnemyBatman
   m_TagString: Untagged
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7428183053177974718
+--- !u!114 &6997565437651562257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,11 +138,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3699368167817436097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9107b1994361e1b4aa806ae4e7717791, type: 3}
+  m_Script: {fileID: 11500000, guid: e6b229556bb4ef147a7a9f44054a81ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Id: 1
-  MoveSpeed: 300
-  JumpDelay: 1
-  JumpPower: 200
+  StartHealth: 0
+  DistanceToShoot: 5
+  MoveSpeed: 0
+  JumpDelay: 0
+  ShootDelay: 0
+  AmmoId: 0
+  JumpPower: 0
   RigidBody2D: {fileID: 8112994089100682252}

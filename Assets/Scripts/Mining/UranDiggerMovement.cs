@@ -50,12 +50,10 @@ public class UranDiggerMovement : MonoBehaviour
             {
                 return;
             }
-            STF.GameManager.Character.MovementController.SetMovementActive(false);
-            isDragging = true;
-            if (!isMovedForFirstTime)
+
+            if (!isDragging)
             {
-                STF.UiManager.UiTooltip.SetActive(false);
-                isMovedForFirstTime = true;
+                StartDragging();
             }
         }
         else
@@ -72,10 +70,25 @@ public class UranDiggerMovement : MonoBehaviour
         }
     }
 
+    private void StartDragging()
+    {
+        STF.GameManager.Character.MovementController.SetMovementActive(false);
+        STF.GameManager.Character.AnimatorController.SetState(AnimationState.Push);
+        isDragging = true;
+        if (!isMovedForFirstTime)
+        {
+            STF.UiManager.UiTooltip.SetActive(false);
+            isMovedForFirstTime = true;
+        }
+    }
+
     private void ForceStopDragging()
     {
-        STF.GameManager.Character.MovementController.SetMovementActive(true);
-        isDragging = false;
+        if (isDragging)
+        {
+            STF.GameManager.Character.AnimatorController.SetState(AnimationState.Idle);
+            STF.GameManager.Character.MovementController.SetMovementActive(true);
+        }
     }
 
     private bool DetermineDragDirection()

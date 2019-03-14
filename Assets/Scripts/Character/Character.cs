@@ -8,4 +8,5 @@ public class Character : MonoBehaviour
     public CharacterStats Stats;
     public CharacterAction Action;
     public FightController FightController;
+    public CharacterAnimatorController AnimatorController;
 }

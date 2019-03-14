@@ -33,13 +33,14 @@ public class CharacterEffects : MonoBehaviour
 
     private void Start()
     {
+        return;
+
         ParticleSetActive(false);
 
         //STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => ParticleSystem.shape.rotation.Set(0, 0, 75));
         //STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => RotateChange(MyKeyCode.Left));
         STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => ParticleSetActive(true));
 
-        //STF.InputController.RegisterKeyAction(MyKeyCode.Right, true, () => ParticleSystem.shape.rotation.Set(0, 0, -75));
         STF.InputController.RegisterKeyAction(MyKeyCode.Right, true, () => ParticleSetActive(true));
         STF.InputController.RegisterKeyAction(MyKeyCode.Left, true, () => RotateChange(MyKeyCode.Right));
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2758594465569116526}
   - component: {fileID: 1891640937977386895}
   - component: {fileID: 6151103686748891653}
-  - component: {fileID: 4706016098749822979}
+  - component: {fileID: 2148149349960450393}
   m_Layer: 10
   m_Name: EnemySpider
   m_TagString: Enemy
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4706016098749822979
+--- !u!114 &2148149349960450393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,10 +138,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2669955923074099291}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9107b1994361e1b4aa806ae4e7717791, type: 3}
+  m_Script: {fileID: 11500000, guid: e6b229556bb4ef147a7a9f44054a81ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: 2
   StartHealth: 30
   DistanceToShoot: 5
   MoveSpeed: 2

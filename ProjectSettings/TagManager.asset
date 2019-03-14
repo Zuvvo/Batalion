@@ -43,15 +43,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackgroundObject
+    uniqueID: 2748302501
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Dron
-    uniqueID: 170137971
     locked: 0
   - name: Enemy
     uniqueID: 3231776877
     locked: 0
-  - name: New Layer
-    uniqueID: 2995887357
+  - name: Character
+    uniqueID: 170137971
     locked: 0
