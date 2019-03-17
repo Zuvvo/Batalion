@@ -18,21 +18,19 @@ public class PlayerResources : MonoBehaviour
     {
         for (int i = 0; i < STF.GameManager.ResourcesDB.Resources.Count; i++)
         {
-            Resource resource = STF.GameManager.ResourcesDB.Resources[i];
-            resources.Add(resource.Id, resource.Copy());
+            Resource resource = STF.GameManager.ResourcesDB.Resources[i].Copy();
+            resources.Add(resource.Id, resource);
 
             UiResource uiResource = Instantiate(UiResourcePrefab, STF.UiManager.ResourcesHolder);
             uiResource.Init(resource);
         }
     }
 
-    public void AddUranium(float value)
+    public void AddResource(int id, float value)
     {
-        resources[0].AddAmount(value);
-    }
-
-    public void AddGold(float value)
-    {
-        resources[1].AddAmount(value);
+        if (resources.ContainsKey(id))
+        {
+            resources[id].AddAmount(value);
+        }
     }
 }

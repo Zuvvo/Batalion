@@ -11,7 +11,7 @@ public class CharacterAnimatorController : MonoBehaviour
     {
         if(CurrentState != state)
         {
-            Debug.Log("Changing state: " + state.ToString());
+            Debug.Log("Changing anim state: " + state.ToString());
             CurrentState = state;
             Animator.SetInteger("AnimationState", (int)state);
         }

@@ -67,6 +67,15 @@ public static class STF // Static Tag (Object) Finder
         }
     }
 
+    private static Player _player;
+    public static Player Player
+    {
+        get
+        {
+            return _player ?? (_player = Object.FindObjectOfType<Player>());
+        }
+    }
+
     public static void NullReferences()
     {
         _gm = null;
@@ -75,5 +84,6 @@ public static class STF // Static Tag (Object) Finder
         _spawnerManager = null;
         _cameraSystem = null;
         _cutsceneManager = null;
+        _camera = null;
     }
 }

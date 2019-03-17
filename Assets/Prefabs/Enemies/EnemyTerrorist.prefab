@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6077344806003804070}
   - component: {fileID: 1748646565566268319}
   - component: {fileID: 8081103105857792859}
+  - component: {fileID: 1416136781492522779}
   m_Layer: 10
   m_Name: EnemyTerrorist
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +118,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5511956, y: 1.5973591}
   m_EdgeRadius: 0
+--- !u!114 &1416136781492522779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235465546416626741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae4595e3f326364bad05684ecbcf8b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RandomDrop:
+  - Id: 1
+    Min: 3
+    Max: 5
 --- !u!1001 &8270215993492847927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -199,12 +216,12 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7908406375096347217, guid: e68b91e0bb9681e40a7846407ed2ea17,
+    - target: {fileID: 7908406374842976226, guid: e68b91e0bb9681e40a7846407ed2ea17,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7908406374842976226, guid: e68b91e0bb9681e40a7846407ed2ea17,
+    - target: {fileID: 7908406375096347217, guid: e68b91e0bb9681e40a7846407ed2ea17,
         type: 3}
       propertyPath: m_Mesh
       value: 
