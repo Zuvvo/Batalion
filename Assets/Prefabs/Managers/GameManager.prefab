@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2802166977742508100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2802166977742508102}
+  - component: {fileID: 2802166977742508103}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2802166977742508102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802166977742508100}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2802166977742508103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802166977742508100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 438c70b20d2308545b0970943dc4ca07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character: {fileID: 0}
+  CameraSystem: {fileID: 0}
+  InputController: {fileID: 0}
+  SpawnerManager: {fileID: 0}
+  CutsceneManager: {fileID: 0}
+  AttacksDB: {fileID: 11400000, guid: 09b6fee62bcdc2b4cb1a71222515ffb4, type: 2}
+  AmmoDB: {fileID: 11400000, guid: 31ebaf90351c8c74d935c81c185fc7be, type: 2}
+  ResourcesDB: {fileID: 11400000, guid: f223bb034d85b8e4cb3f2f5a5dd1dde8, type: 2}
+  BulletsHolder: {fileID: 0}

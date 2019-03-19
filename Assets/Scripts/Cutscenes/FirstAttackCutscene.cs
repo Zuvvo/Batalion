@@ -20,9 +20,6 @@ public class FirstAttackCutscene : Cutscene
 
     protected void StartSpawning()
     {
-        for (int i = 0; i < spawners.Count; i++)
-        {
-            spawners[i].SetActive(true);
-        }
+        STF.WaveManager.InitFirstWaveOnList();
     }
 }

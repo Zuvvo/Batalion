@@ -85,7 +85,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 0
   StartHealth: 30
-  DistanceToShoot: 5
+  FireMinDistance: 2.5
+  FireMaxDistance: 6
   MoveSpeed: 2
   JumpDelay: 1
   ShootDelay: 1

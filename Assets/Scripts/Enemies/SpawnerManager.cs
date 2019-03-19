@@ -7,7 +7,7 @@ public class SpawnerManager : MonoBehaviour
 {
     public bool DebugStopSpawners;
     public bool DebugSpawnSpiders;
-
+    
     public List<Enemy> Enemies = new List<Enemy>();
 
     [SerializeField]
@@ -20,6 +20,11 @@ public class SpawnerManager : MonoBehaviour
     private bool isInitialized;
 
     private List<EnemySpawner> spawners = new List<EnemySpawner>();
+
+    private WaveManager waveManager
+    {
+        get { return STF.WaveManager; }  
+    }
 
 
     private void Update()
@@ -43,7 +48,7 @@ public class SpawnerManager : MonoBehaviour
     {
         for (int i = 0; i < spawners.Count; i++)
         {
-            spawners[i].SetActive(true);
+            spawners[i].Spawn();
         }
     }
 
@@ -60,10 +65,7 @@ public class SpawnerManager : MonoBehaviour
 
     public void StopAllSpawners()
     {
-        for (int i = 0; i < spawners.Count; i++)
-        {
-            spawners[i].SetActive(false);
-        }
+        //not implemented
     }
 
     public void RegisterSpawner(EnemySpawner spawner)

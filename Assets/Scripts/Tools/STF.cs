@@ -76,6 +76,15 @@ public static class STF // Static Tag (Object) Finder
         }
     }
 
+    private static WaveManager _waveManager;
+    public static WaveManager WaveManager
+    {
+        get
+        {
+            return _waveManager ?? (_waveManager = Object.FindObjectOfType<WaveManager>());
+        }
+    }
+
     public static void NullReferences()
     {
         _gm = null;
@@ -85,5 +94,6 @@ public static class STF // Static Tag (Object) Finder
         _cameraSystem = null;
         _cutsceneManager = null;
         _camera = null;
+        _waveManager = null;
     }
 }

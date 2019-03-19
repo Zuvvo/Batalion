@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Terrorist : Enemy
 {
-    public float DistanceToShoot = 5;
+    public float FireMinDistance = 3;
+    public float FireMaxDistance = 6;
 
     public float MoveSpeed;
 
@@ -21,15 +22,19 @@ public class Terrorist : Enemy
     private List<Bullet> bullets = new List<Bullet>();
 
     private bool movementEnabled = true;
+    private bool isShooting;
 
     private float direction;
+
+    private Quaternion lookLeftRotation = new Quaternion(0, 0, 0, 0);
+    private Quaternion lookRightRotation = new Quaternion(0, 180, 0, 0);
 
     protected override void Start()
     {
         base.Start();
         currentAmmo = maxAmmo;
         StartCoroutine(Jump());
-        StartCoroutine(Shoot());
+        StartCoroutine(TryToShoot());
         StartCoroutine(CheckForDistanceToPlayer());
     }
 
@@ -45,25 +50,41 @@ public class Terrorist : Enemy
             if (enemyToPlayer.x > 0)
             {
                 direction = -1;
+                transform.rotation = lookLeftRotation;
             }
             else
             {
                 direction = 1;
+                transform.rotation = lookRightRotation;
             }
 
             float distanceToPlayer = Vector2.Distance(STF.GameManager.Character.transform.position, transform.position);
-
-            movementEnabled = distanceToPlayer >= DistanceToShoot;
+          //  Debug.Log(distanceToPlayer);
+            movementEnabled = distanceToPlayer >= FireMinDistance && !isShooting;
         }
     }
 
-    private IEnumerator Shoot()
+    private IEnumerator TryToShoot()
     {
         while (currentAmmo > 0)
         {
             yield return new WaitForSeconds(ShootDelay);
-            Bullet bulletPrefab = (Bullet)STF.GameManager.AmmoDB.GetEnemyAmmo(AmmoId);
-            Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity, STF.GameManager.BulletsHolder);
+            float distanceToPlayer = Vector2.Distance(STF.GameManager.Character.transform.position, transform.position);
+
+            if(distanceToPlayer <= FireMinDistance)
+            {
+                isShooting = true;
+            }
+            else if(isShooting && distanceToPlayer >= FireMaxDistance)
+            {
+                isShooting = false;
+            }
+
+            if (isShooting)
+            {
+                Bullet bulletPrefab = (Bullet)STF.GameManager.AmmoDB.GetEnemyAmmo(AmmoId);
+                Bullet bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity, STF.GameManager.BulletsHolder);
+            }
         }
     }
 
